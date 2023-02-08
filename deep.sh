@@ -45,7 +45,8 @@ if [[ $yesno =~ "Y"|"y" ]]; then
     wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
     read -rp "请设置UUID（如无设置则使用脚本默认的）：" uuid
     if [[ -z $uuid ]]; then
-        uuid="8d4a8f5e-c2f7-4c1b-b8c0-f8f5a9b6c384"
+        #uuid="8d4a8f5e-c2f7-4c1b-b8c0-f8f5a9b6c384"
+        uuid="fa0d9aeb-df52-4466-a2e9-5203c091f3c0"
     fi
     cat <<EOF > config.json
 {
@@ -71,19 +72,19 @@ if [[ $yesno =~ "Y"|"y" ]]; then
                         "dest":3001
                     },
                     {
-                        "path":"/vless",
+                        "path":"/v2-tl",
                         "dest":3002
                     },
                     {
-                        "path":"/vmess",
+                        "path":"/v2-t",
                         "dest":3003
                     },
                     {
-                        "path":"/trojan",
+                        "path":"/v2-tj",
                         "dest":3004
                     },
                     {
-                        "path":"/shadowsocks",
+                        "path":"/v2-ts",
                         "dest":3005
                     }
                 ]
@@ -127,7 +128,7 @@ if [[ $yesno =~ "Y"|"y" ]]; then
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/vless"
+                    "path":"/v2-tl"
                 }
             },
             "sniffing":{
@@ -155,7 +156,7 @@ if [[ $yesno =~ "Y"|"y" ]]; then
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/vmess"
+                    "path":"/v2-t"
                 }
             },
             "sniffing":{
@@ -183,7 +184,7 @@ if [[ $yesno =~ "Y"|"y" ]]; then
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/trojan"
+                    "path":"/v2-tj"
                 }
             },
             "sniffing":{
@@ -212,7 +213,7 @@ if [[ $yesno =~ "Y"|"y" ]]; then
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/shadowsocks"
+                    "path":"/v2-ts"
                 }
             },
             "sniffing":{
