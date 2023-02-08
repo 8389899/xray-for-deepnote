@@ -21,7 +21,7 @@
 * 在命令行复制粘贴，运行以下命令
 
 ```shell
-wget -N https://raw.githubusercontent.com/Misaka-blog/xray-for-deepnote/main/deep.sh && bash deep.sh
+wget -N https://raw.githubusercontent.com/8389899/xray-for-deepnote/main/deep.sh && bash deep.sh
 ```
 
 * 节点配置如下
